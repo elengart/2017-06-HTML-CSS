@@ -10,7 +10,7 @@ The code is organized into a responsive website in order to highlight basic usag
 * foreground and background images, sprites
 * media queries and responsive layout
 * dropdown menu and pure CSS responisve menu
-* css3 selectors, properties, transforms, animations
+* css3 selectors, properties, animations
 
 
 [DEMO](http://www.school.egartshtein.com/)
