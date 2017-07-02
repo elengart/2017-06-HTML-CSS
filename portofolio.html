@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    
+    <style>
+        .container {
+            position: relative;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.7);
+        }
+        
+        .item {
+            position: relative;
+            float: left;
+            width: 100%;
+        }
+        
+        #gallery figure {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            transition: all 0.2s ease-in-out;
+        }
+        
+        #gallery img {
+            position: relative;
+            width: 100%;
+        }
+               
+        @media (min-width: 768px) {
+            .item {
+              width: 50%;
+              padding: 1em;
+            }
+            
+            #gallery figure {
+                border: 0.5em solid rgba(255, 255, 255, 0.5);
+                box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.5);
+                height: 300px;
+            }
+            
+            #gallery img {
+                min-height:  300px;
+            }
+            
+            #gallery figure:hover {
+                box-shadow: 1px 1px 8px 4px rgb(0, 0, 0);
+                transform: scale(1.2, 1.2);
+                z-index: 10;
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .item {
+                width: 33.33%;
+                padding: 2em;
+            }
+        }
+        
+    </style>
+</head>
+<body id="gallery">
+    <a name="top" />
+    <header>
+        <nav id="topnav">
+            <a id="toggle-topmenu" href="#topmenu"><span></span></a>
+            <ul id="topmenu">
+                 <li id="close-topmenu"><a href="#top">&times;</a>
+                 </li>
+                 <li><a href="index.html">Home</a></li>
+                 <li><a href="index.html#aboutme">About Me</a></li>
+                 <li><a href="index.html#contactme">Contact Me</a></li>
+                 <li><a href="./portofolio.html">Portfolio</a></li>
+                 <li><a href="#">Experiments</a>
+                     <ul>
+                         <li><a href="./portofolio-bootstrap.html">Bootstrap Grid</a></li>
+                         <li><a href="./experiments/flexbox.html">Flexbox</a></li>
+                         <li><a href="./experiments/cssgrid.html">CSS Grid</a></li>
+                         <li><a href="./experiments">See all...</a></li>
+                         </ul>
+                     </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+     <div id="content" class="container">
+         <div class="item">
+             <figure>
+                <img src="assets/gallery/b1.jpeg" alt="butterfly 1" />
+            </figure>
+         </div>
+         <div class="item">
+             <figure>
+                 <img src="assets/gallery/b2.jpeg" alt="butterfly 2" />
+             </figure>
+         </div>
+         <div class="item">
+             <figure>
+                <img src="assets/gallery/b3.jpeg" alt="butterfly 3" />
+            </figure>
+         </div>
+         <div class="item">
+             <figure>
+                <img src="assets/gallery/b4.jpeg" alt="butterfly 4" />
+            </figure>
+         </div>
+         <div class="item">
+            <figure>
+                <img src="assets/gallery/b5.jpeg" alt="butterfly 5" />
+            </figure>
+         </div>
+        <div class="item">
+            <figure>
+                <img src="assets/gallery/b6.jpeg" alt="butterfly 6" />
+            </figure>
+         </div>
+         <div class="item">
+             <figure>
+                <img src="assets/gallery/b7.jpeg" alt="butterfly 7" />
+            </figure>
+         </div>
+         <div class="item">
+             <figure>
+                <img src="assets/gallery/b8.jpeg" alt="butterfly 8" />
+            </figure>
+         </div>
+         <div class="item">
+             <figure>
+                <img src="assets/gallery/b9.jpeg" alt="butterfly 9" />
+             </figure>
+        </div>
+    </div>
+    <footer>
+        <a href="#top">Back To Top</a>
+    </footer>
+</body>
+</html>

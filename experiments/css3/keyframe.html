@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+        @-webkit-keyframes dance{
+            0% {transform: skew(5deg, 15deg)}
+            40% {transform: skew(-70deg, -70deg)}
+            100% {transform: skew(70deg, 180deg)}
+        }
+        
+        @keyframes dance{
+            0% {transform: skew(5deg, 15deg)}
+            40% {transform: skew(-70deg, -70deg)}
+            100% {transform: skew(70deg, 180deg)}
+        }
+        
+        #shape {
+            width: 150px;
+            height: 180px;
+            background-color: pink;
+            border-radius: 50%;
+            margin:0 auto;
+            animation: dance 4s infinite;
+        }
+        #shape2 {
+            width: 300px;
+            height: 400px;
+            background-color: pink;
+            border-top-left-radius: 100%;
+            border-top-right-radius: 100%;
+            margin:0 auto;
+            animation: dance 4s infinite;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="shape">
+    </div>
+    
+    <div id="shape2">        
+    </div>
+    
+</body>
+</html>

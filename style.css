@@ -1,0 +1,419 @@
+/* reset default browser styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body, 
+html, 
+figure, 
+ul,
+h1,
+h2,
+h3, 
+img,
+a {
+    margin: 0;
+    padding: 0;
+}
+/**/
+
+/* typography */
+body {
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    color: #efefef;
+}
+
+h1 {
+    font-size: 300%;
+}
+
+h2 {
+    font-size: 200%;
+}
+
+h3 {
+    font-size: 150%;
+}
+/**/
+
+/* common styles and layout */
+figcaption {
+    padding: 0.5em;
+    font-size: 80%;
+    text-align: center;
+    background: rgba(0,0,0, 0.5);
+}
+
+a:link, 
+a:visited {
+  color: rgb(233, 176, 0);
+  text-decoration: none;
+}
+a:hover, 
+a:active {
+    text-decoration: underline;
+}
+
+body {
+    background-image: url("assets/bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header, 
+footer {
+  text-align: center;
+  min-height: 4em;
+  overflow: auto;
+  background-color: rgba(227, 78, 66, 0.8); 
+}
+
+header,
+footer,
+hgroup, 
+section,
+h2 {
+    padding: 0.5em;
+}
+
+
+h1, 
+h2, 
+h3,
+h4{
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    top: 0;
+}
+
+aside {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(233, 176, 0, 0.8);
+    padding-top: 0.5em;
+}
+
+aside iframe {
+    height: 315px;
+    width: 100%;
+    max-width: 560px;
+    margin-bottom: 1em;
+}
+
+
+aside a:link, a:visited {
+    color: #fff;
+}
+
+aside > p:first-child {
+    margin-top: 0;
+}
+
+#content {
+    overflow: auto;
+}
+
+#main {
+    min-height: 50em;
+    width: 100%;
+}
+
+#main>*:nth-child(even) {
+   background-color: rgba(0, 143, 149, 0.5);
+}
+
+#main>*:nth-child(odd) {
+   background-color: rgba(0, 143, 149, 0.8);
+}
+
+section {
+    min-height: 20em;
+}
+
+section ul {
+    padding-left: 2em;
+}
+
+/* top navigation */
+#toggle-topmenu {
+    display: inline-block;
+    position: absolute;
+    top: 0.7em;
+    right: 0.7em;
+    width: 3em;
+    height: 2.5em;
+    padding: 0.5em;
+    border-radius: 0.4em;
+}
+
+#toggle-topmenu:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* css solution for three lines "hamburger" menu */
+#toggle-topmenu span {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-color: white;
+    border-style: solid;
+    border-width: 0.3em 0;
+}
+
+#toggle-topmenu span:before {
+    content: "\00a0";
+    border-top: 0.3em solid white;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 0;
+}
+
+#close-topmenu {
+    text-align: right;
+}
+
+#topnav {
+    width: 100%;
+}
+
+#topmenu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    min-height: 0;
+    text-align: left;
+    overflow: hidden;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out;
+    list-style: none;
+}
+
+#topmenu:target {
+    height: auto;
+    transform: translateY(0);
+    overflow: auto;
+}
+
+#topmenu li {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+#topmenu li a {
+    display: block;
+    padding: 0.5em; 
+    width: 100%;
+    background-color: #fff;  
+    transition: color 0.5s ease-in-out;
+    border: 1px solid #ccc; 
+    border-width: 1px 0 0 0;
+}
+
+#topmenu > li:first-child > a {
+    border-top-width: 0;
+}
+
+#topmenu ul li a {
+    padding-left: 2em;
+}
+#topmenu ul li a:before {
+    content: "- ";
+}
+
+#topmenu a:link, 
+#topmenu a:visited {
+    color: #666;
+    text-decoration: none;
+}
+
+#topmenu > li:hover > a,
+#topmenu a:hover, 
+#topmenu a:active {
+    color: #333;
+    text-decoration: none;
+}
+ 
+/* dropdown menu */
+#topmenu > li ul {
+    list-style: none;
+    transform: translateY(-100%);
+    transition: transform 0.2s ease-in;
+    height: 0;
+}
+
+#topmenu > li:hover {
+    overflow: auto; 
+}
+
+#topmenu > li:hover ul {
+  height: auto;
+  transform: translateY(0);
+}
+/**/
+
+/* social icons */
+.social {
+    text-align: center;
+}
+
+.social a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 3em;
+    color: #fff;
+    margin: 0.2em;
+}
+
+.social a:hover {
+    opacity: 0.5;
+}
+/**/
+
+.simple-container {
+    overflow: auto;
+}
+
+/* homepage */
+#whydev {
+    padding-left: 2em;
+    padding-top: 1em;
+}
+
+#profile-logo {
+    border: 0.8em solid rgba(0,0,0, 0.2);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#profile-logo img {
+    width: 100%;
+}
+
+
+#contactme form {
+    text-align: center;
+}
+
+/* media queries - mobile first */
+
+/* Small Devices, Tablets */
+@media (min-width:768px) {
+    header, 
+    footer, 
+    aside,
+    section {
+        padding: 1em;
+    }
+    
+    /* fixed width side navigation */
+    aside {
+        width: 10em;
+        min-height: 70em;
+        float: left;
+        padding: 0.5em;
+    }
+    
+    aside iframe {
+        height: auto;
+    }
+    /**/
+    
+    #main {
+        width: calc(100% - 10em);
+        float: left;
+        min-height: 50em;
+    }
+    
+    #profile-logo {
+        width: 50%;
+    }
+    
+    #topnav {
+        float: right;
+        width: auto;
+    }
+    
+    #topmenu > li {
+        position: relative;
+        float: left;  
+    }
+    
+    #topmenu > li > a {
+        border-width: 0 0 0 1px;
+    }
+
+    #topmenu > li:first-child > a {
+        border-left-width: 0;
+    }
+    
+    /* dropdown menu*/
+    #topmenu ul {
+        margin-left: 1px;
+    }
+    #topmenu ul li a {
+        padding-left: 0.5em;
+    }
+    #topmenu ul > li > a {
+        border-width: 1px 0 0 0;
+    }
+    #topmenu ul li a:before {
+        content: "";
+    }
+    /**/
+    
+    #topmenu, 
+    #topmenu li, 
+    #topmenu li a {
+        width: auto;
+    }
+    
+    #toggle-topmenu,
+    #close-topmenu {
+        display: none;
+    }
+    
+    #topmenu, 
+    #topmenu:target {
+        position: relative;
+        margin-top: auto;
+        height: auto;
+        overflow: auto;
+        transform: translateY(0);
+    }
+    
+    /* custom "grid" */
+    .simple-container .c50 {
+        float: left;
+        width: 50%;
+    }  
+    
+    #whydev {
+        padding-top: 0;
+    }
+    /**/
+}
+
+/* Large Devices, Wide Screens */
+@media (min-width: 1200px) {
+    aside {
+        width: 20em;
+    }
+    
+     aside iframe {
+        min-height: 280px;
+    }
+    #main {
+        width: calc(100% - 20em);
+    }
+}
