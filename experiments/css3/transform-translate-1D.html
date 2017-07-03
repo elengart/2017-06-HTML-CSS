@@ -3,6 +3,8 @@
 <head>
     <style>
         #wrapper {
+            width: 700px;
+            margin: 0 auto;
             padding: 50px;
             background: yellow;
             overflow: auto;
@@ -15,19 +17,30 @@
             float: left;
         }
         
-        #shape:hover {
-/*
+       #transform:checked ~ #wrapper #shape {
             transform: translateX(-100px);
-            margin-left: -100px;
-*/
+        }
+        
+        #margin:checked ~ #wrapper #shape {
+             margin-left: -100px;
         }
     </style>
 </head>
 <body>
+    <h1>Margin vs TranslateX</h1>
+    <label for="margin">#shape{ margin-left: -100px}</label><input name="x" type="radio" id="margin"/>
+    <br />
+    <br />
+    <label for="transform">#shape { transform: translateX(-100px) }</label><input name="x" type="radio" id="transform"/>
+    <br />
+    <br />
+    
     <div id="wrapper">
         <div id="shape">
+            shape
         </div>  
         <div id="shape2">
+            shape2
         </div> 
     </div>
 </body>
