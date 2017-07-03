@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <style>
+        .box1 {
+          border: 5px solid #ccc;
+          width: 300px;
+          height:  300px;
+        }
+
+        .box2{
+          width:  50%;
+          height: 50%;
+          left:  50px;
+          background-color: yellow; 
+        }
+        
+        .box3 {
+            width:  100px;
+            height: 100px;
+            background-color: red;
+        }
+        #b1-static:checked ~ .box1 {
+           position: static;
+        }
+        
+        #b1-relative:checked ~ .box1 {
+           position: relative;
+        }
+        
+        #b1-absolute:checked ~ .box1 {
+           position: absolute;
+        }
+        
+        #b2-static:checked ~ .box1 .box2 {
+           position: static;
+        }
+        
+        #b2-relative:checked ~ .box1 .box2 {
+           position: relative;
+        }
+        
+        #b2-absolute:checked ~ .box1 .box2 {
+           position: absolute;
+        }
+        
+        label {
+            margin-left: 1em;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Position property</h1>
+    <strong> outer box</strong>
+    <label for="b1">static</label><input name="b1" type="radio" id="b1-static"  checked/>
+    <label for="b1">absolute</label><input name="b1" type="radio" id="b1-absolute" />
+    <label for="b1">relative</label><input name="b1" type="radio" id="b1-relative" />
+    <br />
+    <strong>inner box</strong>
+    <label for="b2">static</label><input name="b2" type="radio" id="b2-static" checked />
+    <label for="b2">absolute</label><input name="b2" type="radio" id="b2-absolute" />
+    <label for="b2">relative</label><input name="b2" type="radio" id="b2-relative" />
+    <div class="box1">
+        <div class = "box2">
+            {<br> width: 50%; <br> height: 50%; <br> left: 50px; <br>}
+        </div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>
