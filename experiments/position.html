@@ -34,6 +34,10 @@
            position: absolute;
         }
         
+        #b1-fixed:checked ~ .box1 {
+            position: fixed;
+        }
+        
         #b2-static:checked ~ .box1 .box2 {
            position: static;
         }
@@ -45,6 +49,11 @@
         #b2-absolute:checked ~ .box1 .box2 {
            position: absolute;
         }
+        
+        #b2-fixed:checked ~ .box1 .box2 {
+            position: fixed;
+        }
+        
         
         label {
             margin-left: 1em;
@@ -58,11 +67,17 @@
     <label for="b1">static</label><input name="b1" type="radio" id="b1-static"  checked/>
     <label for="b1">absolute</label><input name="b1" type="radio" id="b1-absolute" />
     <label for="b1">relative</label><input name="b1" type="radio" id="b1-relative" />
+    
+    <label for="b1">fixed</label>
+    <input name="b1" type="radio" id="b1-fixed" />
     <br />
     <strong>inner box</strong>
     <label for="b2">static</label><input name="b2" type="radio" id="b2-static" checked />
     <label for="b2">absolute</label><input name="b2" type="radio" id="b2-absolute" />
     <label for="b2">relative</label><input name="b2" type="radio" id="b2-relative" />
+    <label for="b2">fixed</label>
+    <input name="b2" type="radio" id="b2-fixed" />
+    
     <div class="box1">
         <div class = "box2">
             {<br> width: 50%; <br> height: 50%; <br> left: 50px; <br>}
