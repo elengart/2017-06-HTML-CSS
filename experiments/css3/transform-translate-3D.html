@@ -2,28 +2,51 @@
 <html>
 <head>
     <style>
-        #wrapper {
-            padding: 50px;
-            background: yellow;
-            overflow: auto;
-        }
-        #shape, #shape2 {
-            width: 300px;
-            height: 300px;
-            background: orange;
-            border: 2px solid red;
-            float: left;
+        
+        label {
+            display: block;
+            z-index: 10;
         }
         
-        #shape:hover {
-            transform: perspective(500px) translate3d(-100px, -100px, -200px);
+        #shape {
+            width: 50%;
+            margin: 2em auto;
+            background: orange;
+            border: 2px solid red;  
+        }
+        
+        
+        #p1:checked ~ #shape {
+            transform: perspective(200px) translate3D(0, 0, 199px);
+            z-index: 0;
+        }
+        
+        #p2:checked ~ #shape {
+            transform: perspective(200px) translate3D(0, 0, -100px);
+        }
+        
+        #p3:checked ~ #shape {
+            transform: perspective(200px) translate3D(0, 0, 100px);
         }
     </style>
 </head>
 <body>
-    <div id="wrapper">
-        <div id="shape">
-        </div>   
-    </div>
+    <label>Right into my face translateZ(199px)</label>
+    <input name="p" id="p1" type="radio" />
+    <label>Behind the screen translateZ(-100px)</label>
+    <input name="p" id="p2" type="radio" />
+    <label>Above the screen translateZ(100px)</label>
+    <input name="p" id="p3" type="radio" />
+
+    <div id="shape">
+        <pre>
+            #shape {
+                width: 50%;
+                margin: 2em auto;
+                background: orange;
+                border: 2px solid red;  
+            }
+        </pre>
+    </div>   
 </body>
 </html>
