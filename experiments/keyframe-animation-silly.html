@@ -42,17 +42,23 @@
             background-color: azure;
         }
         
-        #shape {
-            position: absolute;
-            top: 40%;
-            
+        .shape {
+            position: relative;
+            display: inline-block;
+            background-color: rgba(0,0,0, 0.5);
+            color: #fff;
+            text-align: center;
+            font-size: 2em;
+            padding: 1em;
+        }
+        
+        p {
+            top: 40%;            
             animation: run 5s infinite;
         }
         
         i {
-            position: absolute;
             top: 60%;
-            
             animation: run 8s infinite;
         }
     </style>
@@ -60,11 +66,11 @@
 <body>
     <h1></h1>
     <div id="wrap">
-        <div id="shape">
+        <p class="shape">
             lorem ipsum
-        </div>
+        </p>
         
-        <i>something</i>
+        <i class="shape">something</i>
     </div>
 </body>
 </html>
