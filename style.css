@@ -270,6 +270,7 @@ section ul {
 #topmenu a:active {
     color: #333;
     text-decoration: none;
+    background-color: #ddd;
 }
  
 /* dropdown menu */
@@ -385,10 +386,16 @@ section ul {
         height: 2.5em;
     }
     
+    #content {
+        position: relative;
+    }
+    
     /* fixed width side navigation */
     aside {
+        position: absolute;
+        top: 0;
+        bottom: 0;
         width: 10em;
-        min-height: 70em;
         float: left;
         padding: 0.5em;
     }
@@ -400,6 +407,7 @@ section ul {
     
     #main {
         width: calc(100% - 10em);
+        margin-left: 10em;
         float: left;
         min-height: 50em;
     }
@@ -493,5 +501,6 @@ section ul {
     }
     #main {
         width: calc(100% - 20em);
+        margin-left: 20em;
     }
 }
