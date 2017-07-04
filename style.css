@@ -77,7 +77,6 @@ h2 {
     padding: 0.5em;
 }
 
-
 h1, 
 h2, 
 h3,
@@ -87,7 +86,9 @@ h4{
 
 header {
     width: 100%;
-    top: 0;
+    position: relative;
+    overflow: visible;
+    z-index: 10;
 }
 
 aside {
@@ -105,7 +106,8 @@ aside iframe {
 }
 
 
-aside a:link, a:visited {
+aside a:link, 
+aside a:visited {
     color: #fff;
 }
 
@@ -182,6 +184,7 @@ section ul {
 
 #topnav {
     width: 100%;
+    z-index: 100;
 }
 
 #topmenu {
@@ -284,6 +287,25 @@ section ul {
     overflow: auto;
 }
 
+/* site logo */
+#logo {
+    position: absolute;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    left: 0.5em;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#logo img {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+/**/
+
 /* homepage */
 #whydev {
     padding-left: 2em;
@@ -316,6 +338,12 @@ section ul {
         padding: 1em;
     }
     
+    #logo {
+        left: 1em;
+        width: 2.5em;
+        height: 2.5em;
+    }
+    
     /* fixed width side navigation */
     aside {
         width: 10em;
@@ -335,13 +363,16 @@ section ul {
         min-height: 50em;
     }
     
-    #profile-logo {
-        width: 50%;
+
+    #topnav {
+        position: absolute;
+        display: inline-block;
+        max-width: 80%;
+        right: 1em;
     }
     
-    #topnav {
+    #topmenu {
         float: right;
-        width: auto;
     }
     
     #topmenu > li {
@@ -390,18 +421,24 @@ section ul {
         height: auto;
         overflow: auto;
         transform: translateY(0);
+
     }
-    
-    /* custom "grid" */
-    .simple-container .c50 {
-        float: left;
-        width: 50%;
-    }  
     
     #whydev {
         padding-top: 0;
     }
+    
+    #profile-logo {
+        width: 50%;
+    }
+    
+    /* simple two colums layout */
+    .simple-container .c50 {
+        float: left;
+        width: 50%;
+    }  
     /**/
+    
 }
 
 /* Large Devices, Wide Screens */

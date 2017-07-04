@@ -8,26 +8,26 @@
     <link href="style.css" type="text/css" rel="stylesheet" />
     
     <style>
-        .container {
+       .container {
             position: relative;
             overflow: auto;
             background-color: rgba(0,0,0,0.7);
         }
         
-        .item {
+       .item {
             position: relative;
             float: left;
             width: 100%;
         }
         
-        #gallery figure {
+        .gallery figure {
             position: relative;
             width: 100%;
             overflow: hidden;
             transition: all 0.2s ease-in-out;
         }
         
-        #gallery img {
+        .gallery img {
             position: relative;
             width: 100%;
         }
@@ -38,17 +38,17 @@
               padding: 1em;
             }
             
-            #gallery figure {
+            .gallery figure {
                 border: 0.5em solid rgba(255, 255, 255, 0.5);
                 box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.5);
                 height: 300px;
             }
             
-            #gallery img {
+            .gallery img {
                 min-height:  300px;
             }
             
-            #gallery figure:hover {
+            .gallery figure:hover {
                 box-shadow: 1px 1px 8px 4px rgb(0, 0, 0);
                 transform: scale(1.2, 1.2);
                 z-index: 10;
@@ -64,31 +64,33 @@
         
     </style>
 </head>
-<body id="gallery">
+<body>
     <a name="top" />
     <header>
+        <a id="logo" href="index.html">
+            <img src="assets/logo.png" alt="site logo"/>
+        </a>
         <nav id="topnav">
             <a id="toggle-topmenu" href="#topmenu"><span></span></a>
             <ul id="topmenu">
                  <li id="close-topmenu"><a href="#top">&times;</a>
                  </li>
                  <li><a href="index.html">Home</a></li>
-                 <li><a href="index.html#aboutme">About Me</a></li>
-                 <li><a href="index.html#contactme">Contact Me</a></li>
+                 <li><a href="#about">About</a></li>
+                 <li><a href="#contactme">Contact</a></li>
                  <li><a href="./portofolio.html">Portfolio</a></li>
                  <li><a href="#">Experiments</a>
                      <ul>
                          <li><a href="./portofolio-bootstrap.html">Bootstrap Grid</a></li>
                          <li><a href="./experiments/flexbox.html">Flexbox</a></li>
                          <li><a href="./experiments/cssgrid.html">CSS Grid</a></li>
-                         <li><a href="./experiments">See all...</a></li>
-                         </ul>
+                          <li><a href="./experiments">See all...</a></li>
                      </ul>
                 </li>
             </ul>
         </nav>
     </header>
-     <div id="content" class="container">
+     <div id="content" class="container gallery">
          <div class="item">
              <figure>
                 <img src="assets/gallery/b1.jpeg" alt="butterfly 1" />
@@ -137,6 +139,7 @@
     </div>
     <footer>
         <a href="#top">Back To Top</a>
+        <small>&copy; 2017 Elena Gartshtein</small>
     </footer>
 </body>
 </html>

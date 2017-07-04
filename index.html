@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Web Developer</title>
+        <title>No JS Web Developer</title>
         <meta charset="utf-8" />
         <meta http-equiv="Content-type" content="text/html" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,14 +11,17 @@
     <body id="indexpage">
         <a name="top"></a>
         <header>
+            <a id="logo" href="index.html">
+                <img src="assets/logo.png" alt="site logo"/>
+            </a>
             <nav id="topnav">
                 <a id="toggle-topmenu" href="#topmenu"><span></span></a>
                 <ul id="topmenu">
                      <li id="close-topmenu"><a href="#top">&times;</a>
                      </li>
                      <li><a href="index.html">Home</a></li>
-                     <li><a href="#aboutme">About Me</a></li>
-                     <li><a href="#contactme">Contact Me</a></li>
+                     <li><a href="#about">About</a></li>
+                     <li><a href="#contactme">Contact</a></li>
                      <li><a href="./portofolio.html">Portfolio</a></li>
                      <li><a href="#">Experiments</a>
                          <ul>
@@ -37,8 +40,8 @@
                     <a href="https://github.com/elengart/2017-06-HTML-CSS" target="_blank">view on github</a>
                 </p>
                 <div class="social">
-                    <a href="#" class="icon-facebook" aria-label="facebook"></a>
-                    <a href="#" class="icon-twitter" aria-label="twitter"></a>
+                    <a href="#" class="icon-facebook" taget="_blank" aria-label="facebook"></a>
+                    <a href="#" class="icon-twitter" target="_blank" aria-label="twitter"></a>
                 </div>
                 <iframe src="https://www.youtube.com/embed/arj7oStGLkU" frameborder="0" >
                 </iframe>
@@ -59,12 +62,21 @@
                         <li>dropdown menu and pure CSS responisve menu</li>
                         <li>css3 selectors, properties, transforms, animations</li>
                    </ul>
-                    <p>
-                        We intentionally NOT using any css frameworks on the main page of the site. Also the content is gibberish for the most part. Still, I hope this site will provide a useful reference for my students and, purhaps, to someone who begins learning HTML and CSS from scratch. 
-                    </p>
+                    <article>
+                        <h4>How to use this site</h4>
+                        <ul>
+                            <li>click around and <a href="https://www.computerhope.com/issues/ch000746.htm"  target="_blank">view source</a></li>
+                            <li>inspect using <a href="https://developers.google.com/web/tools/chrome-devtools/inspect-styles/?utm_source=dcc&utm_medium=redirect&utm_campaign=2016q3" target="_blank">Chrome DevTools' Elements Tab</a></li>
+                            <li>view or download source from <a href="https://github.com/elengart/2017-06-HTML-CSS" target="_blank">github</a></li>
+                        </ul>
+                        
+                        <p>
+                            We intentionally NOT using any css frameworks on the main page of the site. Also the content is gibberish for the most part. Still, I hope this site will provide a useful reference for my students and, purhaps, to someone who begins learning HTML and CSS from scratch. 
+                        </p>
+                    </article>
                   </section>
-                <section id="aboutme">
-                    <h2>Why do I want to be a web developer?
+                <section id="about">
+                    <h2>Why do I want to be a web developer? Student's say...
                     </h2>
                     <div class="simple-container">
                         <figure id="profile-logo" class="c50">
