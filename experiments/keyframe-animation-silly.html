@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        @keyframes run {
+             0% {
+                 left: 0%;
+             }
+            
+            20% {
+                transform: translateY(50px) rotateZ(90deg);
+            }
+            40% {
+                transform: translateY(-50px) rotateZ(-180deg);
+            }
+            100% {
+                left: 100%;
+                transform: translateX(-100%);
+            }
+        }
+               
+        html {
+            height: 100%;
+        }
+        
+        body {
+            height: 100%;
+            background: #ececec;
+        }
+        
+        #wrap {
+            position: relative;
+            width: 80%;
+            height: 80%;
+            margin: 5% auto;
+            border: 1em dashed cyan;
+            background-color: azure;
+        }
+        
+        #shape {
+            position: absolute;
+            top: 40%;
+            
+            animation: run 5s infinite;
+        }
+        
+        i {
+            position: absolute;
+            top: 60%;
+            
+            animation: run 8s infinite;
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <div id="wrap">
+        <div id="shape">
+            lorem ipsum
+        </div>
+        
+        <i>something</i>
+    </div>
+</body>
+</html>
