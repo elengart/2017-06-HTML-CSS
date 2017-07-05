@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        html {
+            height: 100%;
+        }
+        
+        body {
+            height: 100%;
+            background: #ececec;
+        }
+        
+        #wrap {
+            position: relative;
+            width: 80%;
+            height: 80%;
+            margin: 5% auto;
+            border: 1em dashed cyan;
+            background-color: azure;
+        }
+        
+        .shape {
+            position: relative;
+            display: inline-block;
+            background-color: rgba(0,0,0, 0.5);
+            color: #fff;
+            text-align: center;
+            font-size: 2em;
+            padding: 1em;
+        }
+        
+        p {
+            top: 40%;            
+            animation: run 5s infinite;
+        }
+        
+        i {
+            top: 60%;
+            animation: run 8s infinite;
+        }
+        
+        @keyframes run {
+             0% {
+                 left: 0%;
+             }
+            
+            20% {
+                transform: translateY(50px) rotateZ(90deg);
+            }
+            40% {
+                transform: translateY(-50px) rotateZ(-180deg);
+            }
+            100% {
+                left: 100%;
+                transform: translateX(-100%);
+            }
+        }
+               
+    </style>
+</head>
+<body>
+    <h1>Keyframes Intro</h1>
+    <h2>Animating multiple properites, including transforms</h2>
+    <div id="wrap">
+        <p class="shape">
+            lorem ipsum
+        </p>
+        
+        <i class="shape">something</i>
+    </div>
+</body>
+</html>

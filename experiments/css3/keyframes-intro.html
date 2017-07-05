@@ -1,0 +1,110 @@
+keyframes-silly2.html
+DETAILS
+ACTIVITY
+keyframes-silly2.html
+Sharing Info
+
+General Info
+Type
+HTML
+Size
+2 KB (1,568 bytes)
+Storage used
+2 KB (1,568 bytes)
+Location
+2017 06 M1 M2 HTML CSS
+Owner
+me
+Modified
+1:45 PM by me
+Opened
+5:57 PM by me
+Created
+1:45 PM with Google Drive Web
+Description
+Add a description
+Download permissions
+Viewers can download
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+     
+        html {
+            height: 100%;
+        }
+        
+        body {
+            height: 100%;
+            background: #ececec;
+        }
+        
+        #wrap {
+            position: relative;
+            width: 80%;
+            height: 80%;
+            margin: 5% auto;
+            border: 1em dashed cyan;
+            background-color: azure;
+        }
+        
+        .shape {
+            position: relative;
+            display: inline-block;
+            background-color: rgba(0,0,0, 0.5);
+            color: #fff;
+            text-align: center;
+            font-size: 2em;
+            padding: 1em;
+        }
+        
+        #shape2 {
+            width: 100px;
+            height: 100px;
+            animation: run 3s ease-in;
+        }
+        
+        p {
+            animation: run 4s linear;
+        }
+        
+        @keyframes run {
+            0% {
+                margin-left: 0;
+                background-color: red;
+            }
+            50% {
+                margin-left: 60%;
+            }
+            100% {
+                margin-left: 0;
+                background-color: blue;
+            }
+        }       
+    </style>
+</head>
+<body>
+    <h1>Keyframes Intro</h1>
+    <ul>
+        <li>how to animate on page load</li>
+        <li>how to apply same animation to different elements
+        </li>
+        <li>animating multiple properites</li>
+        <li>loopback</li>
+    </ul>
+    <div id="wrap">
+        <p class="shape">
+            lorem ipsum
+        </p>
+        
+        <div id="shape2">lorem</div>
+    </div>
+</body>
+</html>
