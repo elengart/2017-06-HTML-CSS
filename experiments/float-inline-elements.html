@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+</head>
+    
+<style>
+    a {
+        display: block;
+    }
+    span {
+        border:  1px solid gray;
+        width:  200px;
+    }
+    #container:target span {
+        float: left;
+    }
+    .row {
+        margin-top: 20px;
+        border: 1px solid red;
+        overflow: auto;
+    }    
+</style>
+<body>
+    <h1>Styling Experiment</h1>
+    <h2>When we float inline elements, do they become inline-block?</h2>
+    <a id="l2" href="#l1">don't float</a>
+    <a id="l1" href="#container">float to all spans to the left</a>
+    <div id="container">
+        <div class="row">
+            <span>Lorem Ipsum1:</span> <span>1234</span>
+        </div>
+        <div class="row">
+        <span>Lorem Impsum 2 Lorem Ipsum 2:</span>      <span>678</span>
+        </div>
+    </div>
+</body>
+</html>
