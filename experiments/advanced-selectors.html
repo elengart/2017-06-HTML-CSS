@@ -1,0 +1,96 @@
+
+<!doctype html>
+<html>
+   <head>
+      <title>Advanced Selectors</title>
+      <meta charset="utf-8" />
+      <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <style type="text/css">
+         * {
+            box-sizing: border-box;
+         }  
+         body {
+            background-color: #f0f0f2;
+            margin: 0;
+            padding: 0;
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+         }
+         div {
+            width: 600px;
+            margin: 5em auto;
+            padding: 50px;
+            background-color: #fff;
+            border-radius: 1em;
+         }
+         p, section {
+            color: rgb(255, 0, 0);
+         }
+         a:link, a:visited {
+            color: #38488f;
+            text-decoration: none;
+         }
+         a:hover {
+            color: #333;
+         }     
+         #main-nav * {
+            border:  1px solid #ccc;
+            padding: 5px;
+         }
+         section>p {
+            font-weight: bold;
+         } 
+         section>p ~ span {
+            text-decoration: underline;
+         }  
+         section {
+            display: none;
+         } 
+         ul li:nth-child(odd) {
+            background: #ccc;
+         }
+         ul:before {
+            content: "\00a0";
+            background-color: yellow;
+         }    
+      </style>
+   </head>
+   <body>
+      <div>
+         <header>
+            <nav id="main-nav">
+               <a href="#">Home</a>
+               <a href="#">Portfolio</a>
+            </nav>
+         </header>
+         <h1>Advanced Selectors Experiment</h1>
+         <p>
+             lorem ipsum
+         </p>
+         <p><a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/">More information...</a></p>
+         <section>
+            <p>
+               Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem i
+            </p>
+            <span>Right After First Paragraph</span>
+            <span>lorem 2</span>
+            <span>lorem 3</span>
+            <hr />
+            <br />
+            <span>Right After BR</span>
+         </section>
+         <ul>
+            <li>Lorem Impsum1</li>
+            <li>Lorem Impsum2</li>
+            <li>Lorem Impsum3</li>
+            <li>Lorem Impsum4</li>
+         </ul>
+         <footer>
+            <nav>
+               <a href="home.html">Home</a>
+               <a href="portfolio.html">Portfolio</a>
+            </nav>
+         </footer>
+      </div>
+   </body>
+</html>
